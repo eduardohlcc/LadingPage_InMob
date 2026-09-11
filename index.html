@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Imobiliária Premium | Investimentos e Moradia</title>
+    <meta name="description" content="Especialista em investimentos imobiliários e imóveis de alto padrão.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN para prototipagem rápida) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuração Customizada do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            500: '#d4af37',
+                            600: '#aa8c2c',
+                        },
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Ajustes finos de UI */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 overflow-x-hidden">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo e Nome da Empresa -->
+            <a href="#" class="flex items-center gap-3 text-2xl font-serif font-bold text-white tracking-wider">
+                <!-- A classe mix-blend-screen foi adicionada aqui -->
+                <img src="logo.jpg" alt="Logo InMob" class="h-10 w-auto object-contain rounded-sm mix-blend-screen">
+                <span>InMob<span class="text-gold-500">.</span></span>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#sobre" class="text-white hover:text-gold-500 transition text-sm uppercase tracking-wide">O Consultor</a>
+                <a href="#servicos" class="text-white hover:text-gold-500 transition text-sm uppercase tracking-wide">Serviços</a>
+                <a href="#depoimentos" class="text-white hover:text-gold-500 transition text-sm uppercase tracking-wide">Resultados</a>
+                <a href="#contato" class="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2.5 rounded-sm transition transform hover:-translate-y-0.5 shadow-lg text-sm font-medium">
+                    Falar com Especialista
+                </a>
+            </nav>
+
+            <!-- Botão Mobile -->
+            <button class="md:hidden text-white focus:outline-none" aria-label="Abrir menu" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center pt-20" id="inicio">
+        <!-- Imagem de Fundo (Substitua pela imagem real) -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
+                <span class="text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4 block">Investimentos Inteligentes</span>
+                <h1 class="text-5xl md:text-7xl font-serif text-white font-bold leading-tight mb-6">
+                    Construa seu patrimônio com <span class="italic text-gray-300">segurança</span> e exclusividade.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light">
+                    Assessoria completa para investidores e compradores exigentes. Encontre o imóvel ideal com a orientação de quem domina o mercado há mais de 15 anos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-sm text-center font-medium transition transform hover:-translate-y-1 shadow-lg shadow-gold-500/30 flex items-center justify-center gap-2">
+                        Agendar Consultoria <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#servicos" class="border border-white hover:bg-white hover:text-dark text-white px-8 py-4 rounded-sm text-center font-medium transition flex items-center justify-center">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Consultor / Autoridade -->
+    <section class="py-24 bg-white" id="sobre">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="Imagem.pai.jpeg" alt="Consultor Imobiliário" class="rounded-sm shadow-2xl w-full object-cover h-[500px]">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-serif font-bold text-dark mb-6">Experiência que se traduz em <span class="text-gold-500 text-3xl font-serif italic">rentabilidade</span>.</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        No mercado imobiliário, a informação é o seu maior ativo. Como consultor credenciado com histórico comprovado, minha missão é identificar oportunidades que outros não veem.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-gold-500 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Mais de 15 anos de atuação no mercado de alto padrão.</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-gold-500 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Consultor credenciado pelos principais órgãos do setor.</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-gold-500 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Rede de contatos exclusiva para acesso a imóveis off-market.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Serviços (Cards com Micro-interações) -->
+    <section class="py-24 bg-slate-50" id="servicos">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-gold-500 font-semibold tracking-widest text-sm uppercase">Soluções</span>
+                <h2 class="text-4xl font-serif font-bold text-dark mt-2 mb-4">Como posso ajudar você?</h2>
+                <p class="text-gray-600">Serviços personalizados para cada etapa do seu momento financeiro e de vida.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-slate-900 text-gold-500 rounded-sm flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-white transition">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-dark mb-3">Investimento Estratégico</h3>
+                    <p class="text-gray-600 mb-6">Análise de mercado, identificação de áreas em valorização e gestão de portfólio imobiliário visando alta rentabilidade e fluxo de caixa.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-slate-900 text-gold-500 rounded-sm flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-white transition">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-dark mb-3">Busca do Imóvel Ideal</h3>
+                    <p class="text-gray-600 mb-6">Assessoria dedicada para quem busca um novo lar. Filtramos, visitamos e negociamos as melhores propriedades de acordo com seu estilo de vida.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-slate-900 text-gold-500 rounded-sm flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-white transition">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-dark mb-3">Assessoria Jurídica Básica</h3>
+                    <p class="text-gray-600 mb-6">Acompanhamento completo na estruturação de contratos e análise de documentação para garantir transações 100% seguras e sem surpresas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Social Proof / Depoimentos -->
+    <section class="py-24 bg-dark text-white" id="depoimentos">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <i class="fas fa-quote-right text-4xl text-gold-500 mb-4 opacity-50"></i>
+                <h2 class="text-4xl font-serif font-bold mb-4">A confiança de quem já investiu</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Depoimento 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-sm backdrop-blur-sm border border-slate-700" data-aos="fade-right">
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"A consultoria foi fundamental. O que parecia complexo tornou-se simples. Conseguimos arrematar uma propriedade fantástica antes mesmo de ir a público. Retorno garantido."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-500 rounded-full bg-[url('https://randomuser.me/api/portraits/men/32.jpg')] bg-cover"></div>
+                        <div>
+                            <h4 class="font-bold">Ricardo S.</h4>
+                            <span class="text-gold-500 text-sm">Investidor Corporativo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-sm backdrop-blur-sm border border-slate-700" data-aos="fade-left">
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Procurávamos um apartamento com características muito específicas. A paciência e a rede de contatos mostraram que estávamos com o profissional certo."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-500 rounded-full bg-[url('https://randomuser.me/api/portraits/women/44.jpg')] bg-cover"></div>
+                        <div>
+                            <h4 class="font-bold">Mariana V.</h4>
+                            <span class="text-gold-500 text-sm">Compradora de Imóvel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA Final -->
+    <footer class="bg-slate-900 pt-16 pb-8 border-t border-slate-800" id="contato">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 bg-gold-600 p-10 rounded-sm" data-aos="zoom-in">
+                <div class="mb-6 md:mb-0 md:w-2/3">
+                    <h2 class="text-3xl font-serif text-white font-bold mb-2">Pronto para dar o próximo passo?</h2>
+                    <p class="text-white/80">Agende uma reunião inicial gratuita e entenda como posso otimizar seus recursos.</p>
+                </div>
+                <div>
+                    <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5583999326747%26text%3DOl%2525C3%2525A1%252520%2521%252520Seja%252520bem%252520vindo%2528a%2529%252520a%252520INMOB%252520investimentos.%252520Como%252520posso%252520te%252520ajudar%252520%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafYTR9vzAkTLGMrmpqVJkzcTdQjJZk_OBpKH6KvG4CRB-j4tlUWxQWGrpQ0vg_aem_SV8pn5IfMsZg_9j4w2HcSg&e=AUDv-sDKXDEEdSnB5PB2dtb8UCgwrOdHMVJxi5Nonut8b_AWEaWLjAMmFqLQX3295AQ1vIir_0xIQMncB-XLpMcuNOVByaI5dDSDRCwHKxnN1ue9ySUwsGse3b9hxLzvLFzuNux-rdnM" target="_blank" class="bg-dark hover:bg-slate-800 text-white px-8 py-4 rounded-sm font-medium transition shadow-xl inline-block">
+                        <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-400 text-sm">
+                <div>
+                    <a href="#" class="flex items-center gap-3 text-2xl font-serif font-bold text-white tracking-wider mb-4">
+                        <!-- A classe mix-blend-screen foi adicionada aqui também -->
+                        <img src="logo.jpg" alt="Logo InMob" class="h-8 w-auto object-contain rounded-sm mix-blend-screen">
+                        <span>InMob<span class="text-gold-500">.</span></span>
+                    </a>
+                    <p>Consultoria e investimentos imobiliários com foco em resultados e exclusividade.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2 text-gold-500"></i> inmobnegociosimob@gmail.com</li>
+                        <li><i class="fas fa-phone mr-2 text-gold-500"></i> (83) 99932-6747</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/inmob_imobiliaria/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-gray-500 text-xs">
+                <p>&copy; 2026 InMob Consultoria Imobiliária. CRECI 10850F. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Interação -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa animações de Scroll
+        AOS.init({
+            once: true, // Anima apenas na primeira vez que rola
+            offset: 100, // Offset (em px) do ponto original
+        });
+
+        // Controle da Navbar (Efeito Glass ao rolar a página)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Simulação simples de Menu Mobile (Para produção, refine a acessibilidade)
+        const btn = document.getElementById('mobile-menu-btn');
+        btn.addEventListener('click', () => {
+            alert('Lógica para abrir/fechar sidebar ou dropdown aqui.');
+        });
+    </script>
+</body>
+</html>
